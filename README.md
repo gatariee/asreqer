@@ -47,3 +47,8 @@ $krb5pa$18$Admin$CONTOSO.LOCAL$f4073aa7ba175[... snip... ]b99f44ec9
 => Admin@CONTOSO.LOCAL-f4073a.krb5pa
 =========================
 ```
+
+## ref
+
+[https://www.thehacker.recipes/ad/movement/kerberos/asreqroast](https://www.thehacker.recipes/ad/movement/kerberos/asreqroast)
+[https://github.com/TheFlamingCrab/ticketsniffer](https://github.com/TheFlamingCrab/ticketsniffer)
